@@ -3,7 +3,7 @@ const router = require('./routes/jobPosting.js');
 const app=express();
 const mongoose=require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/JobApp")
+mongoose.connect(process.env.CONNECTION_STRING)
 .then(()=>{
     console.log("Connected Successfully");
 })
